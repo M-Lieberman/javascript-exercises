@@ -1,3 +1,4 @@
 # javascript-exercises
 
-Repo for JavaScript exercises from Eloquent JavaScript and JavaScript and JQuery.
+Repo for JavaScript exercises from books e.g. Eloquent JavaScript, JavaScript and JQuery) or code mastery sites (e.g. CodeWars, LeetCode, Interview Cake).
+
