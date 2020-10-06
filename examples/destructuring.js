@@ -1,3 +1,6 @@
+/**
+ * https://kentcdodds.com/blog/javascript-to-know-for-react
+ */
 
 // Destructure this into a single line of code
 function nestedArrayAndObject() {
@@ -23,7 +26,7 @@ function nestedArrayAndObject() {
     return `${enemyName} (${enemyTitle}) is an enemy to ${protagonistName} in "${title}"`
   }
 
-// // Destructured version
+// TODO Destructured version exercise
 //   function nestedArrayAndObjectDestructured() {
 
 //   }

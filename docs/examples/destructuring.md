@@ -32,3 +32,34 @@ function UserGitHubImg({username = 'ghost', ...props}) {
 }
 ```
 
+### Swapping variables
+Two variables values can be swapped in one destructuring expression.
+
+Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the XOR-swap trick).
+```javascript
+let a = 1;
+let b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+const arr = [1,2,3];
+[arr[2], arr[1]] = [arr[1], arr[2]];
+console.log(arr); // [1,3,2]
+```
+
+## Object Destructuring
+
+### Basic assignment
+```javascript
+const user = {
+    id: 42,
+    is_verified: true
+};
+
+const {id, is_verified} = user;
+
+console.log(id); // 42
+console.log(is_verified); // true 
+```
