@@ -2,6 +2,7 @@ const {
     sumMultiples,
     isValidDNA,
     getComplementaryDNA,
+    DNAStrand,
     isItPrime,
     createMatrix,
     areWeCovered
@@ -107,6 +108,25 @@ describe("getComplementaryDNA", () => {
             getComplementaryDNA('Gattaca');
         }).toThrow("valid DNA is required");
     });
+});
+
+
+describe("DNAStrand", () => {
+    test("return complementary DNA pairs - A <-> T", () => {
+        expect(DNAStrand('A')).toBe('T');
+        expect(DNAStrand('T')).toBe('A');
+        expect(DNAStrand('AT')).toBe('TA');
+        expect(DNAStrand('TATTA')).toBe('ATAAT');
+    });
+    test("return complementary DNA pairs - C <-> G", () => {
+        expect(DNAStrand('C')).toBe('G');
+        expect(DNAStrand('G')).toBe('C');
+        expect(DNAStrand('GCGCGC')).toBe('CGCGCG');
+    });
+    test("return valid DNAStrand", () => {
+        expect(DNAStrand('GATTACA')).toBe('CTAATGT');
+    });
+ 
 });
 
 // This function should receive a number and return true/false depending on whether it is a prime number or not. 

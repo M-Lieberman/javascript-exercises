@@ -61,6 +61,21 @@ const getComplementaryDNA = str => {
   return res;
 };
 
+
+// CodeWars short version - no error handling
+function DNAStrand(dna) {
+  const pairs = {
+      A: 'T',
+      T: 'A',
+      C: 'G',
+      G: 'C',
+  };
+  return dna.replace(/./g, function (c) {
+      return pairs[c];
+  })
+}
+
+
 /**
  * This function should receive a number and return true/false depending on whether it is a prime number or not. A prime number is a number that can only be divided evenly by 1 and itself (for example, 7)
  * @param {Number} n
@@ -145,6 +160,7 @@ module.exports = {
   sumMultiples,
   isValidDNA,
   getComplementaryDNA,
+  DNAStrand,
   isItPrime,
   createMatrix,
   areWeCovered
