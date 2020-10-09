@@ -56,9 +56,7 @@ function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // filter users where type = linux
   // return length of new array
-  const linuxUsers = users.filter(function (user) {
-    return user.type == 'Linux';
-  });
+  const linuxUsers = users.filter(user => user.type == 'Linux');
   return linuxUsers.length;
 }
 
