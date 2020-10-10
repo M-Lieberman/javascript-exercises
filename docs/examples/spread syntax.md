@@ -14,7 +14,6 @@ let objClone = { ...obj };
 ```
 
 
-
 ### examples
 ```javascript
  // Apply for a new operator
