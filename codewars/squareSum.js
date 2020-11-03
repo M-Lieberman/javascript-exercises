@@ -2,7 +2,10 @@
 // For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 
 function squareSum(numbers) {
-  return numbers.map(n => n * n).reduce( (total, n) => total += n);
+  let r =  numbers.map(n => n * n);
+  return  r.reduce( (total, n) => total += n, 0); // 0 initialises to pretect against an empty array
+   
+  // return numbers.map(n => n * n).reduce( (total, n) => total += n);
 }
 
 
