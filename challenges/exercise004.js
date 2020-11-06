@@ -41,17 +41,8 @@ function findSentencesContaining(sentences, str) {
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  return triangles.map(function (triangle) {
-    let longest = 0;
-    // for some reason Math.max() returns NaN here so I'm doing this the long way 
-    // though this could be done using Array.reduce
-    triangle.forEach(function (side) {
-      if (side > longest) {
-        longest = side;
-      }
-    });
-    return longest;
-  });
+  // using the spread operator to insert the array into Math function
+  return triangles.map((triangle) => Math.max(...triangle));
 }
 
 module.exports = {
