@@ -78,16 +78,8 @@ const newArr = arr.map(function(item) {
 Basic Syntax:
 
 ```javascript
+// newArr is your new filtered array
 const arr = ["foo", "bar", "bazzzz"];
 
-const newArr = arr.filter(function(item) {
-  // do something with item e.g.
-  if (item.length > 3) {
-    return true;
-  } else {
-    return false;
-  }
-});
-
-// newArr is your new filtered array
+const newArr = arr.filter(function(item) =>  return item.length > 3);
 ```
