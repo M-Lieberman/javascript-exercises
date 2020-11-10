@@ -59,11 +59,7 @@ const getWordFrequencies = str => {
   const freq = {};
   for (let i = 0; i < words.length; i++) {
     const word = words[i];
-    if (freq[word] === undefined) {
-      freq[word] = 1;
-    } else {
-      freq[word] += 1;
-    }
+    freq[word] === undefined ? freq[word] = 1 : freq[word] += 1;
   }
   return freq;
 };
