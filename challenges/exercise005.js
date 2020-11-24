@@ -57,10 +57,9 @@ const getWordFrequencies = str => {
   // ignore punctuation and capitals
   const words = str.replace(/[^a-zA-Z ]/g, "").toLowerCase().split(' ');
   const freq = {};
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
+  words.forEach(word => {
     freq[word] === undefined ? freq[word] = 1 : freq[word] += 1;
-  }
+  });
   return freq;
 };
 
